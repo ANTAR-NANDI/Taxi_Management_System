@@ -28,7 +28,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -45,7 +45,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -62,7 +62,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -79,7 +79,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -96,7 +96,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -113,7 +113,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -130,7 +130,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -147,7 +147,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -164,7 +164,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -181,7 +181,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -198,7 +198,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -215,7 +215,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
         </div>
@@ -241,7 +241,7 @@
                     <div class="text-left">
                         <h3 class="text-uppercase text-light mb-3">Looking for a Taxi?</h3>
                         <p class="mb-4">Are you Looking for a Taxi?</p>
-                        <a class="btn btn-primary py-2 px-4" href="">Book Now</a>
+                        <a class="btn btn-primary py-2 px-4" href="booking_details.php">Book Now</a>
                     </div>
                     <img class="img-fluid flex-shrink-0 mr-n5 w-50 ml-4" src="public/User/img/car-rent-1.png" alt="">
                 </div>

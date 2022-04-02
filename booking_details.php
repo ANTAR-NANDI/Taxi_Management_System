@@ -65,22 +65,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12 form-group">
-                            <select class="custom-select px-4" style="height: 50px;">
-                                <option selected>Select Taxi Code</option>
-                                <option value="1">hdbhhhh</option>
-                                <option value="2">hdbhhhh</option>
-                                <option value="3">hdbhhhh</option>
-                                <option value="1">hdbhhhh</option>
-                                <option value="2">hdbhhhh</option>
-                                <option value="3">hdbhhhh</option>
-                                <option value="1">hdbhhhh</option>
-                                <option value="2">hdbhhhh</option>
-                                <option value="3">hdbhhhh</option>
-                            </select>
-                        </div>
-                    </div>
                     <div class="form-group">
                         <textarea class="form-control py-3 px-4" rows="3" placeholder="Special Request" required="required"></textarea>
                     </div>
@@ -101,6 +85,7 @@
                             <label class="custom-control-label" for="directcheck">Hand Cash</label>
                         </div>
                     </div>
+                   
                     <button class="btn btn-block btn-primary py-3">Reserve Now</button>
                 </div>
             </div>

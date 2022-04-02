@@ -170,7 +170,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -187,7 +187,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -204,7 +204,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -221,7 +221,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -238,7 +238,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
@@ -255,7 +255,7 @@
                             <span>AUTO</span>
                         </div>
                     </div>
-                    <a class="btn btn-primary px-3" href="">Book Now</a>
+                    <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
                 </div>
             </div>
         </div>
