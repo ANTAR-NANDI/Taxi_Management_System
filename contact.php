@@ -46,28 +46,28 @@
                         <i class="fa fa-2x fa-map-marker-alt text-primary flex-shrink-0 mr-3"></i>
                         <div class="mt-n1">
                             <h5 class="text-light">Head Office</h5>
-                            <p>123 Street, New York, USA</p>
+                            <p>New Market, Dhaka, Bangladesh</p>
                         </div>
                     </div>
                     <div class="d-flex mb-3">
                         <i class="fa fa-2x fa-map-marker-alt text-primary flex-shrink-0 mr-3"></i>
                         <div class="mt-n1">
                             <h5 class="text-light">Branch Office</h5>
-                            <p>123 Street, New York, USA</p>
+                            <p>New Market, Chittagong, Bangladesh</p>
                         </div>
                     </div>
                     <div class="d-flex mb-3">
                         <i class="fa fa-2x fa-envelope-open text-primary flex-shrink-0 mr-3"></i>
                         <div class="mt-n1">
                             <h5 class="text-light">Customer Service</h5>
-                            <p>customer@example.com</p>
+                            <p>Karim@gmail.com</p>
                         </div>
                     </div>
                     <div class="d-flex">
                         <i class="fa fa-2x fa-envelope-open text-primary flex-shrink-0 mr-3"></i>
                         <div class="mt-n1">
                             <h5 class="text-light">Return & Refund</h5>
-                            <p class="m-0">refund@example.com</p>
+                            <p class="m-0">refund@gmail.com</p>
                         </div>
                     </div>
                 </div>
