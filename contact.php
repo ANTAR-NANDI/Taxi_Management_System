@@ -1,4 +1,22 @@
-<?php include 'include/header.php'; ?>
+<?php include 'include/header.php';
+if (isset($_POST['submit'])) {
+
+    //htmlspecialchars
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $msg = $_POST['message'];
+    $msg_date  = date('Y-m-d H:i:s');
+    include("db/connection.php");
+    $sql = "insert into contacts  (name,email,subject,msg,msg_date) values
+    ('$name','$email','$subject','$msg','$msg_date')";
+    $r = $conn->query($sql); //0
+    if ($r) {
+        $_SESSION['taxi_added_message'] = "Taxi Successfully Added";
+    } else {
+    }
+}
+?>
 <!-- Page Header Start -->
 <div class="container-fluid page-header">
     <h1 class="display-3 text-uppercase text-white mb-3">Contact</h1>
@@ -19,23 +37,23 @@
         <div class="row">
             <div class="col-lg-7 mb-2">
                 <div class="contact-form bg-light mb-4" style="padding: 30px;">
-                    <form>
+                    <form method="POST" action="contact.php">
                         <div class="row">
                             <div class="col-6 form-group">
-                                <input type="text" class="form-control p-4" placeholder="Your Name" required="required">
+                                <input name="name" type="text" class="form-control p-4" placeholder="Your Name" required="required">
                             </div>
                             <div class="col-6 form-group">
-                                <input type="email" class="form-control p-4" placeholder="Your Email" required="required">
+                                <input name="email" type="email" class="form-control p-4" placeholder="Your Email" required="required">
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control p-4" placeholder="Subject" required="required">
+                            <input name="subject" type="text" class="form-control p-4" placeholder="Subject" required="required">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control py-3 px-4" rows="5" placeholder="Message" required="required"></textarea>
+                            <textarea name="message" class="form-control py-3 px-4" rows="5" placeholder="Message" required="required"></textarea>
                         </div>
                         <div>
-                            <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                            <button value="submit" name="submit" class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
                         </div>
                     </form>
                 </div>
@@ -77,3 +95,14 @@
 </div>
 <!-- Contact End -->
 <?php include 'include/footer.php'; ?>
+<script>
+    $(document).ready(function() {
+        setInterval(function() {
+            $('.toast').toast('show');
+        }, refresh_time * 1000);
+
+    });
+</script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>

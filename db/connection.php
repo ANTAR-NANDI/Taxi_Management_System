@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "4th_taxi_management");
+$conn = mysqli_connect("localhost", "root", "", "taxi_management_system");
 if ($conn) {
     # code...
     //echo "connected";
