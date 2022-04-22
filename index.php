@@ -50,16 +50,16 @@
     <div class="container">
         <h1 class="display-4 text-uppercase text-center mb-5">Find Your Taxi</h1>
         <div class="row">
-                <?php
-                $sl = 1;
-                include("db/connection.php");
-                $sql = "select * from taxies LIMIT 6";
-                $r = $conn->query($sql);
-                while ($row = mysqli_fetch_array($r)) {
-                    $taxi_code = $row['taxi_code'];
-                    $reg_no = $row['reg_no'];
-                    $id = $row['id'];
-        ?>
+            <?php
+            $sl = 1;
+            include("db/connection.php");
+            $sql = "select * from taxies LIMIT 6";
+            $r = $conn->query($sql);
+            while ($row = mysqli_fetch_array($r)) {
+                $taxi_code = $row['taxi_code'];
+                $reg_no = $row['reg_no'];
+                $id = $row['id'];
+            ?>
 
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="rent-item mb-4">
@@ -75,14 +75,14 @@
                                 <span>AUTO</span>
                             </div>
                         </div>
-                        <a class="btn btn-primary px-3" href="booking_details.php">Book Now</a>
+                        <a class="btn btn-primary px-3" href="booking.php?id=<?php echo $id ?>">Book Now</a>
                     </div>
                 </div>
             <?php
 
-                }
+            }
             ?>
-    </div>
+        </div>
     </div>
 </div>
 <!-- Rent A Car End -->

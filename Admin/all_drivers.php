@@ -7,16 +7,21 @@
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 style="margin-left: 10px;">All Drivers</h1>
+                <div class="col-sm-5">
+
+                </div>
+                <div class="col-sm-2">
+                    <h1 class="m-0"><span class="badge badge-info">All Drivers</span></h1>
+
                 </div><!-- /.col -->
-                <div class="col-sm-6">
+                <div class="col-sm-5">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                         <li class="breadcrumb-item active">All Drivers</li>
                     </ol>
                 </div><!-- /.col -->
-            </div><!-- /.row -->
+            </div>
+            <hr>
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
@@ -26,7 +31,7 @@
         <div class="container-fluid">
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table">
+                    <table class="table table-bordered" id="example">
                         <thead style="background-color: #e6e6e6">
                             <tr>
                                 <th>Sl.</th>
@@ -68,8 +73,9 @@
                                     <td><?php echo $age; ?></td>
                                     <td><?php echo $address; ?></td>
                                     <td><?php echo $nid_no; ?></td>
-                                    <td><a class="btn btn-info" href="edit_driver.php?id=<?php echo $id ?>">Edit</a></td>
-                                    <td><a class="btn btn-danger" href="delete_driver.php?id=<?php echo $id ?>">Delete</a></td>
+                                    <td><a class="btn btn-info" href="edit_driver.php?id=<?php echo $id ?>">Edit</a>
+                                        <a class="btn btn-danger" href="delete_driver.php?id=<?php echo $id ?>">Delete</a>
+                                    </td>
 
                                 </tr>
 

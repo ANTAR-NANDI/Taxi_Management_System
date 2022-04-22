@@ -55,12 +55,7 @@
                                   <p>All Taxies</p>
                               </a>
                           </li>
-                          <li class="nav-item">
-                              <a href="assign.php" class="nav-link">
-                                  <i class="far fa-circle nav-icon"></i>
-                                  <p>Assign Taxies</p>
-                              </a>
-                          </li>
+
                       </ul>
                   </li>
                   <li class="nav-item">
@@ -82,6 +77,29 @@
                               <a href="all_drivers.php" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>All Drivers</p>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#" class="nav-link">
+                          <i class="nav-icon fas fa-chart-pie"></i>
+                          <p>
+                              Rents
+                              <i class="right fas fa-angle-left"></i>
+                          </p>
+                      </a>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="assign.php" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Assign Taxies</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="rents.php" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Rents List</p>
                               </a>
                           </li>
                       </ul>

@@ -2,11 +2,9 @@
 <?php include 'includes/sidebar.php'; ?>
 <?php
 if (isset($_POST['submit'])) {
-
-    //htmlspecialchars
     $name = $_POST['name'];
     $nid = $_POST['nid'];
-    $mobile = $_POST['name'];
+    $mobile = $_POST['mobile'];
     $age = $_POST['age'];
     $address = $_POST['address'];
     include("../db/connection.php");
@@ -14,7 +12,7 @@ if (isset($_POST['submit'])) {
     ('$name','$nid','$mobile','$age','$address')";
     $r = $conn->query($sql); //0
     if ($r) {
-        $_SESSION['driver_added_message'] = "Driver Successfully Added";
+        die("<script>location.href = 'https://localhost/Taxi-Management_System/Admin/all_drivers.php'</script>");
     } else {
         $_SESSION['driver_added_message'] = "Driver Add Failed";
     }

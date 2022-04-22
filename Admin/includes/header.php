@@ -29,13 +29,11 @@
 </head>
 <?php
 session_start();
-// if (!isset($_SESSION['email']))
-//     header("Location:../../Auth/login.php");
-
 if (isset($_GET['sign']) and $_GET['sign'] == "out") {
-    $_SESSION['login_status'] = "loged out";
+    
     unset($_SESSION['email']);
-    header("Location:../../Auth/login.php");
+    $_SESSION['login_status'] = "logged out";
+    header("Location:../../Taxi-Management_System/Auth/login.php");
 }
 ?>
 

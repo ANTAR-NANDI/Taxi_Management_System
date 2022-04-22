@@ -10,8 +10,11 @@
 </div>
 <?php
 if (isset($_POST['submit'])) {
-
-    //htmlspecialchars
+     if (isset($_GET['id'])) {
+        $taxi_id = $_POST['taxi_id'];
+    } else {
+        $taxi_id = 0;
+    } 
     $first_name = $_POST['fname'];
     $last_name = $_POST['lname'];
     $email = $_POST['email'];
@@ -21,14 +24,17 @@ if (isset($_POST['submit'])) {
     $booking_date = $_POST['booking_date'];
     $booking_time = $_POST['booking_time'];
     $request = $_POST['request'];
-    $myOriginalDate = str_replace('/', '-', $booking_date);
-    $myNewDate = date("Y-m-d", strtotime($myOriginalDate));
+    //$myNewDate = date("Y-m-d", $booking_date);
+    $data_inizio = date('Y-m-d', strtotime(str_replace('-', '/', $booking_date)));
     include("db/connection.php");
-    $sql = "insert into bookings  (first_name,last_name,email,mobile,pickup,drop_point,booking_date,booking_time,request) values
-    ('$first_name','$last_name','$mobile','$email','$pickup','$drop_point','$myNewDate','$booking_time','$request')";
+    $sql = "insert into bookings  (first_name,last_name,mobile,email,pickup,drop_point,booking_date,booking_time,request,taxi_id) values
+    ('$first_name','$last_name','$mobile','$email','$pickup','$drop_point','$data_inizio','$booking_time','$request','$taxi_id')";
+
+    //echo $sql;
     $r = $conn->query($sql); //0
     if ($r) {
         $_SESSION['booking_added_message'] = "Booking Successfully Added";
+        
     } else {
         $_SESSION['booking_added_message'] = "Booking Add Failed";
     }
@@ -36,25 +42,37 @@ if (isset($_POST['submit'])) {
 ?>
 <!-- Page Header Start -->
 <!-- Car Booking Start -->
+
 <div class="container-fluid pb-5">
     <div class="container">
+        <?php
+        if (isset($_SESSION['booking_added_message'])) {
+        ?>
+            <div class="alert alert-info alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <?php echo $_SESSION['booking_added_message'] ?>
+            </div>
+        <?php
+            $_SESSION['booking_added_message'] = '';
+        }
+        ?>
         <form method="POST" action="booking.php">
             <div class="row">
-                <?php
-                if (isset($_SESSION['booking_added_message'])) {
-                ?>
-                    <div class="alert alert-info alert-dismissable">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <?php echo $_SESSION['booking_added_message'] ?>
-                    </div>
-                <?php
-                    $_SESSION['booking_added_message'] = '';
-                }
-                ?>
+
                 <div class="col-lg-8">
                     <h2 class="mb-4">Personal Detail</h2>
                     <div class="mb-5">
                         <div class="row">
+                            <?php
+                            if (isset($_GET['id'])) {
+                                echo '<div class="col-6 form-group">
+                                <input type="hidden" name="taxi_id" 
+                                class="form-control p-4" value="'.($_GET['id'] ? $_GET['id'] : 0); '">
+                            </div>';
+                               
+                            } 
+                            ?>
+                           
                             <div class="col-6 form-group">
                                 <input type="text" name="fname" class="form-control p-4" placeholder="First Name" required="required">
                             </div>

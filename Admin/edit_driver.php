@@ -29,17 +29,7 @@
                 <div class="col-md-6">
                     <div class="card card-default">
                         <div class="card-body p-4">
-                            <?php
-                            if (isset($_SESSION['taxi_added_message'])) {
-                            ?>
-                                <div class="alert alert-info alert-dismissable">
-                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                    <?php echo $_SESSION['taxi_added_message'] ?>
-                                </div>
-                            <?php
-                                $_SESSION['taxi_added_message'] = '';
-                            }
-                            ?>
+                            
                             <div class="bs-stepper">
                                 <div class="bs-stepper-content" style=" padding: 10px">
                                     <?php
@@ -69,7 +59,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Mobile Number</label>
-                                                    <input type="number" name="mobile" value="<?php echo $mobile ?>" class="form-control" id="exampleInputPassword1" placeholder="Enter Mobile Number">
+                                                    <input type="number" name="mobile" value="<?php echo $mobile ?>" class="form-control"  placeholder="Enter Mobile Number">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Driver Age</label>

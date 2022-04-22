@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     ('$taxi_code','$reg_no','$v_rent')";
     $r = $conn->query($sql); //0
     if ($r) {
-        $_SESSION['taxi_added_message'] = "Taxi Successfully Added";
+        die("<script>location.href = 'https://localhost/Taxi-Management_System/Admin/all_taxies.php'</script>");
     } else {
         $_SESSION['taxi_added_message'] = "Taxi Successfully Added";
     }

@@ -48,20 +48,20 @@ session_start();
                         <span class="db"><img src="logo.png" alt="logo" /></span>
                     </div>
                     <!-- Form -->
-                    <form action="login.php" method="POST">
+                    <form action="process_signin.php" method="POST">
                         <div class="row p-b-30">
                             <div class="col-12">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-success text-white" id="basic-addon1"><i class="ti-user"></i></span>
                                     </div>
-                                    <input type="text" name="email" class="form-control form-control-lg" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required="">
+                                    <input type="email" name="email" class="form-control form-control-lg" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required="">
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-warning text-white" id="basic-addon2"><i class="ti-pencil"></i></span>
                                     </div>
-                                    <input type="text" name="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required="">
+                                    <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required="">
                                 </div>
                             </div>
                         </div>
@@ -122,41 +122,7 @@ session_start();
             $("#loginform").fadeIn();
         });
     </script>
-    <?php
-    include("../db/connection.php");
-    if (isset($_POST['submit'])) {
-        $email = $_POST['email'];
-        //$password=mysqli_real_escape_string($conn, $_POST['pass']);
-        $password = $_POST['password'];
-        //   echo "$email"."$password";
-        echo $_POST['password'];
 
-        $sql = "select * from users where email='$email' and password='$password'";
-        $r = $conn->query($sql);
-
-
-
-        if ($r->num_rows > 0) {
-
-
-            while ($row = $r->fetch_assoc()) {
-                $email = $row['email'];
-                $id = $row['id'];
-            }
-            $_SESSION['email'] = $email;
-            $_SESSION['id'] = $id; //filter
-            header("Location:../Admin/index.php");
-        } else {
-            echo "Wrong Password";
-        }
-    }
-
-
-
-
-
-
-    ?>
 </body>
 
 </html>

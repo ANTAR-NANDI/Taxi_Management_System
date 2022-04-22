@@ -1,4 +1,5 @@
 <?php include 'include/header.php';
+
 if (isset($_POST['submit'])) {
 
     //htmlspecialchars
@@ -12,8 +13,9 @@ if (isset($_POST['submit'])) {
     ('$name','$email','$subject','$msg','$msg_date')";
     $r = $conn->query($sql); //0
     if ($r) {
-        $_SESSION['taxi_added_message'] = "Taxi Successfully Added";
+        $_SESSION['success_msg'] = "Thanks for Contacting Us !! ";
     } else {
+        $_SESSION['error_msg'] = "Failed";
     }
 }
 ?>
@@ -34,10 +36,29 @@ if (isset($_POST['submit'])) {
 <div class="container-fluid py-5">
     <div class="container pt-5 pb-3">
         <h1 class="display-4 text-uppercase text-center mb-5">Contact Us</h1>
+        <?php
+        if (isset($_SESSION['success_msg']) && $_SESSION['success_msg'] != '') {
+            echo '<div class="alert alert-info alert-dismissible fade show" role="alert">
+                <strong>' . $_SESSION['success_msg'] . '</strong> 
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>';
+
+        }
+         if(isset($_SESSION['error_msg']) && $_SESSION['error_msg'] != ''){
+            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>' . $_SESSION['error_msg'] . '</strong> 
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>';
+        }
+        ?>
         <div class="row">
             <div class="col-lg-7 mb-2">
                 <div class="contact-form bg-light mb-4" style="padding: 30px;">
-                    <form method="POST" action="contact.php">
+                    <form method="POST" enctype="multipart/form-data" autocomplete="off" action="contact.php">
                         <div class="row">
                             <div class="col-6 form-group">
                                 <input name="name" type="text" class="form-control p-4" placeholder="Your Name" required="required">
